@@ -1,4 +1,122 @@
-<script>
-  document.write("Hello World");
-  
-</script>
+<!doctype html>
+<html>
+  <head>
+    <title>Agnir's Portfolio ! ꪆৎ ˚⋅</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy%display=swap" rel="stylesheet">
+
+    <style>
+      header{
+        margin-top: 30px;
+        text-align: center;
+      }
+      .top-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+      }
+      h1 {
+        font-family:chewy;
+        text-align: center;
+        color: #44472F; 
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+      body {
+        margin: 10px;
+        font-family: monospace;
+        background-color: #B2AC88;
+        background-size: cover;
+        color: #6B654C;
+      }
+      .random{
+        margin-top: 40px;
+      }
+      .box{
+        background-color: #DED8AD;
+        padding: 40px;
+        margin: 20px;
+        width: 250px;
+        height: 150px;
+      }
+      .large-box{
+        width: 90%;
+        height: 150px;
+        margin: 20px;
+      }
+      .picture{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 20px;
+      }
+
+.flex-container {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.columns {
+  flex: 1 1 45%; /* flex-grow, flex-shrink, flex-basis */
+}
+
+@media (max-width: 600px) {
+  .columns {
+    flex-basis: 100%; /* Stack on smaller screens */
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1> about me ! </h1>
+      <nav>
+        <a href ="#">exercises</a>
+        <a href ="#">notes</a>
+        <a href ="#">tracker</a>
+      </nav>
+    </header>
+  <section class="top-section">
+    <div class="box">
+      <p> helloo ! my name's kacey adelyne o. agnir . </p>
+      <p> ╭ nickname : kas !! ♡‧₊˚꒰ ☕️</p>
+      <p> ┆~> birthday : 12.28.10.</p> 
+      <p> ┆/ᐠ - ˕ -マ cns: t01 > ca01 > k02</p>
+      <p> ╰ ➤ ₍⑅ᐢ..ᐢ : i love 007n7 </p>
+    </div>
+    <img src="https://i.pinimg.com/736x/d2/8b/b9/d28bb9b5aa01551916107860dd2f3ce0.jpg" class="picture"/> 
+    <img src="https://i.pinimg.com/1200x/89/31/ad/8931adfe2a89a18896212cded8750f9e.jpg" class="picture"/>
+    <img src="https://i.pinimg.com/736x/a7/ff/d8/a7ffd87809cee8b57481cf14b9673b25.jpg" class="picture"/>
+  </section>
+
+ <section class="random">
+  <div class="row">
+    <div class="box large-box flex-container"> 
+      <div class="columns">
+        <h3>likes ! ฅ^>⩊<^ ฅ</h3>
+        <ul>
+          <li>food</li>
+          <li>studying</li>
+          <li>FORSAKENN</li>
+          <li>reading !</li>
+          <li>drawing</li>
+          <li>writing lyrics / novels</li>
+        </ul>
+      </div>
+
+      <div class="columns">
+        <h3>ᵕ—ᴗ— dislikes</h3>
+        <ul>
+          <li>cats...</li>
+          <li>the heat</li>
+          <li>bright lights</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</html>
+
