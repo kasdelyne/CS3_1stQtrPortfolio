@@ -10,9 +10,9 @@ The key points from SONA 2025 that I found interesting are: first, the **20 peso
  ### 2. Give *1-3 key points* from SONA 2025 that you found *weird* for any reason (explaining is optional)
     * A P20 per kilo rice program 
     * he avoidance of some crucial issues such as:
-          - West Philippine Sea dispute
-          - Online gambling issues
-          - Impeachment complaint against VP Sara Duterte
+          - West Philippine Sea dispute,
+          - Online gambling issues,
+          - Impeachment complaint against VP Sara Duterte. 
 
 
 ### 3. Write 2 paragraphs of reflection (each paragraph is ideally around 4 sentences)
