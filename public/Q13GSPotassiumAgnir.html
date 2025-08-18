@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Second Graded Exercise ! </title>
+    </head>
+
+    <body>
+        <h2> Q1 3rd Graded Exercise submitted by Kacey Agnir of 9Potassium</h2>
+
+    <p> Guess the number: ****</p>
+    <p> The number is from 1-100: </p>
+    <input type="number" id="guessedNum" min="1" max="100"> 
+    <button onclick="checkIt()"> Check </button>
+
+    <p id="result"></p>
+
+    <script>
+        let dNumber=Math.floor(Math.random()*100)+1;
+
+        function checkIt(){
+            let guessedNum=document.getElementById("guessedNum").value;
+            let resultT=" ";
+
+            if (guessedNum < dNumber){
+                resultT="Higher";
+            }
+
+            else if (guessedNum == dNumber){
+                resultT="That's right !";
+            }
+
+            else if(guessedNum > dNumber){
+                resultT="Lower";
+            }
+
+            document.getElementById("result").textContent=resultT;
+        }
+    </script>
+    </body>
+
+</html>
