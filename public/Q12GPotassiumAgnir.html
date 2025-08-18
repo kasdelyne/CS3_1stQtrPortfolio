@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Second Graded Exercise ! </title>
+    </head>
+
+    <style>
+        footer{
+            margin-top: auto;
+            padding: 10px;
+        }
+    </style>
+
+    <body>
+        <h2> Q1 2nd Graded Exercise submitted by Kacey Agnir of 9Potassium</h2>
+
+    <div>
+    <label for="mealPrice"> Meal Price: </label>
+    <input type="text" id="mealPrice">
+    </div>
+    
+    <div>
+    <label for="tip"> Tip: </label>
+    <input type="text" id="tip">
+    </div>
+
+    <div>
+    <label for="serviceCharge"> Service Charge: </label>
+    <input type="text" id="serviceCharge">
+    </div>
+
+    <button onclick="totalMeal()"> Accept Input</button>
+    <p id="result"> Total Meal: </p>
+
+    <script>
+        function totalMeal(){
+        let mP=+document.getElementById("mealPrice").value
+        let tip=+document.getElementById("tip").value
+        let sC=+document.getElementById("serviceCharge").value
+
+        let totalCost=mP+tip+(sC/100*mP);
+        let format=totalCost.toFixed(2);
+
+        document.getElementById("result").innerText="TotalMeal: "+format;
+        }
+    </script>
+
+    <footer>
+    <h3> References: </h3>
+        <p> <i>W3Schools.com</i>(n.d) https://www.w3schools.com/js/js_operators.asp</p>
+        <p> <i>W3Schools.com</i>(n.d) https://www.w3schools.com/jsref/jsref_tofixed.asp</p>
+    </footer>
+    
+    </body>
+</html>
