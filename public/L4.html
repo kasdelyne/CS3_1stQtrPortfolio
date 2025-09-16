@@ -1,0 +1,85 @@
+  <h1>Guess My Word</h1>
+  <p id="wordDisplay"></p>
+
+  <input type="text" id="guessInput" maxlength="1">
+  <button onclick="makeGuess()">Guess</button>
+
+  <p id="message"></p>
+  <p id="guessedLetters"><strong>Guessed Letters:</strong> <span id="lettersList"></span></p>
+  <p id="attempts">Remaining Attempts: <span id="attemptCount">10</span></p>
+
+  <button id="playAgainBtn" onclick="resetGame()">Play Again</button>
+
+  <script>
+    const secretWord = ["k", "i", "n", "d", " ", "k", "a", "s"];
+    let guessedWord = [];
+    let guessedLetters = [];
+    let maxAttempts = 4;
+    let remainingAttempts = maxAttempts;
+    const input = document.getElementById("guessInput");
+
+    function initializeGame() {
+      guessedWord = secretWord.map(char => char === " " ? " " : "_");
+      guessedLetters = [];
+      remainingAttempts = maxAttempts;
+      updateDisplay();
+      document.getElementById("message").textContent = "";
+      document.getElementById("message").className = "";
+      document.getElementById("playAgainBtn").style.display = "none";
+      input.disabled = false;
+    }
+
+    function updateDisplay() {
+      document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+      document.getElementById("lettersList").textContent = guessedLetters.join(", ");
+      document.getElementById("attemptCount").textContent = remainingAttempts;
+    }
+
+    function makeGuess() {
+      const guess = input.value.toLowerCase();
+      input.value = "";
+      if (!guess || guess.length !== 1 || guessedLetters.includes(guess)) return;
+
+      guessedLetters.push(guess);
+      let correct = false;
+
+      for (let i = 0; i < secretWord.length; i++) {
+        if (secretWord[i] === guess) {
+          guessedWord[i] = guess;
+          correct = true;
+        }
+      }
+
+      if (!correct) remainingAttempts--;
+
+      updateDisplay();
+      showMessage(correct ? "✅ Correct!" : "❌ Try again.", correct ? "correct" : "incorrect");
+
+      if (guessedWord.join("") === secretWord.join("")) {
+        showMessage("🎉 You guessed it: KIND KAS!", "correct");
+        endGame();
+      } else if (remainingAttempts === 0) {
+        showMessage("😢 Out of attempts! The word was: KIND KAS", "incorrect");
+        endGame();
+      }
+    }
+
+    function showMessage(text, type) {
+      const msg = document.getElementById("message");
+      msg.textContent = text;
+      msg.className = type;
+    }
+
+    function endGame() {
+      input.disabled = true;
+      document.getElementById("playAgainBtn").style.display = "inline-block";
+    }
+
+    function resetGame() {
+      initializeGame();
+    }
+
+    initializeGame();
+  </script>
+</body>
+</html>
